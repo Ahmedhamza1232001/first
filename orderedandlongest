@@ -1,0 +1,38 @@
+ public static string LongestAbecedarian(string[] arr)
+        {
+            string arranged="";
+            foreach (string item in arr)
+            {
+                if (IsAranged(item) && item.Length > arranged.Length)
+                {
+                    arranged = item;
+
+                }
+                
+                
+                
+            }
+            return arranged;
+        }
+        public static bool IsAranged(string x) 
+        {
+            bool b=false;
+            for (int i = 1; i < x.Length; i++)
+            {
+                if ((int)(x[i]) < (int)(x[i - 1]))
+                {
+                    return false;
+                 
+                }
+                else
+                {
+                    b= true;
+                }
+
+                
+            }
+            return b;
+
+
+
+        }
